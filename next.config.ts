@@ -12,3 +12,4 @@ const nextConfig = {
   },
 };
 export default nextConfig;
+//next/image を使う時のセキュリティ設定。
