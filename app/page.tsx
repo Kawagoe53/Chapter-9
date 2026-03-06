@@ -10,8 +10,8 @@ import type { Post } from "../app/_types/post";
 export default function Posts() {
   const [posts, setPosts] = useState<Post[]>([]); //データの保持するためにpostsという空箱を用意する
   const [error, setError] = useState<string | null>(null); //最初はエラーないからnull
-  const [isLoading, setIsLoading] = useState<boolean>(true); //読み込み中の状態管理
-
+  const [isLoading, setIsLoading] = useState(true); //読み込み中の状態管理
+  //初期値をtrueにすると、このステートはboleanだと推論されるので型を明示しなくても大丈夫です！
   useEffect(() => {
     const fetcher = async () => {
       // useEffectに直接asyncをつけるとPromiseが返ってきてしまうため、
